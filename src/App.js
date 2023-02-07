@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+
 
 function App() {
+  const handleInstagramClick = () => {
+    window.location.href = "https://www.instagram.com/friendsandfamily.nyc/";
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="body">
+      <div className="icon-container">
+        <button className="icon" onClick={handleInstagramClick}>
+          <FontAwesomeIcon icon={faInstagram} className="fa-3x"/>
+        </button>
+      </div>
     </div>
   );
 }
 
 export default App;
+
+
+
+
